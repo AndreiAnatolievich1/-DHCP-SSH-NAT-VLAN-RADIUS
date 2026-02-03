@@ -26,7 +26,7 @@
 `switch1(config)#int range f0/3-4 `<br>
 `switch1(config-if-range)#switchport mode access ` **указываем что данный интерфейс является интерфейсом доступа** <br>
 `switch1(config-if)#switchport access vlan 3 ` **указываем vlan этого интерфейса** <br>
-`switch1(config-if-range)#ex`
+`switch1(config-if-range)#ex` <br>
 `switch1(config)#int f0/10` <br>
 `switch1(config-if)#switchport mode trunk` **обозначаем интерфейс как trunk , это озночает что по нему теперь могут ходить тегированные frame** <br>
 `switch1(config-if)#switchport trunk all vlan 2,3,4,5`  <br>
