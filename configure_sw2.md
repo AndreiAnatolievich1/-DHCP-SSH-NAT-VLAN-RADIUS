@@ -15,18 +15,18 @@
 `switch2(config)#vlan 5` <br>
 `switch2(config-vlan)# name switch1` <br>
 `switch2(config-vlan)# ex` <br>
-`switch2(config)#int vlan 5`
+`switch2(config)#int vlan 5`  <br>
 `switch2(config-if)#ip address 192.168.5.3 255.255.255.252` **Задаем ip на интерфейс коммутатора для удаленного подключения** <br>
 `switch2(config-if)# ip default-gateway 192.168.5.1` **задаем шлюз по умолчанию** <br>
 `switch2(config-if)# ex` <br>
 `switch2(config)#int range f0/1-2` **переходим к настройке нескольких интерфейсов** <br>
 `switch2(config-if-range)#switchport mode access` **указываем что данный интерфейс является интерфейсом доступа** <br>
 `switch2(config-if-range)#switchport access vlan 2 ` **указываем vlan этого интерфейса** <br>
-`switch2(config-if-range)#ex`
+`switch2(config-if-range)#ex`  <br>
 `switch2(config)#int range f0/3-4 `<br>
 `switch2(config-if-range)#switchport mode access ` **указываем что данный интерфейс является интерфейсом доступа** <br>
 `switch2(config-if)#switchport access vlan 3 ` **указываем vlan этого интерфейса** <br>
-`switch2(config-if-range)#ex`
+`switch2(config-if-range)#ex`  <br>
 `switch2(config)#int f0/10` <br>
 `switch2(config-if)#switchport mode trunk` **обозначаем интерфейс как trunk , это озночает что по нему теперь могут ходить тегированные frame** <br>
 `switch2(config-if)#switchport trunk all vlan 2,3,4,5`  <br>
